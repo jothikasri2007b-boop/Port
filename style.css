@@ -1,0 +1,193 @@
+/* Background with animated gradient */
+
+body {
+
+  margin: 0;
+
+  font-family: 'Poppins', sans-serif;
+
+  color: #fff;
+
+  text-align: center;
+
+  background: linear-gradient(135deg, #ff6b6b, #6a11cb, #2575fc);
+
+  background-size: 400% 400%;
+
+  animation: gradientShift 12s ease infinite;
+
+  min-height: 100vh;
+
+}
+
+@keyframes gradientShift {
+
+  0% { background-position: 0% 50%; }
+
+  50% { background-position: 100% 50%; }
+
+  100% { background-position: 0% 50%; }
+
+}
+
+/* Floating circle decorations */
+
+.circles::before, .circles::after {
+
+  content: "";
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  animation: float 8s infinite ease-in-out alternate;
+
+}
+
+.circles::before {
+
+  width: 180px;
+
+  height: 180px;
+
+  top: 15%;
+
+  left: 10%;
+
+}
+
+.circles::after {
+
+  width: 250px;
+
+  height: 250px;
+
+  bottom: 10%;
+
+  right: 10%;
+
+  animation-duration: 14s;
+
+}
+
+@keyframes float {
+
+  from { transform: translateY(0px); }
+
+  to { transform: translateY(-40px); }
+
+}
+
+/* Header */
+
+header {
+
+  padding: 60px 20px;
+
+}
+
+h1 {
+
+  font-size: 3rem;
+
+}
+
+h1 span {
+
+  color: #ffdd59;
+
+  text-shadow: 0 0 15px #000;
+
+}
+
+.tagline {
+
+  font-size: 1.2rem;
+
+  margin-top: 10px;
+
+}
+
+/* Section styles */
+
+section {
+
+  margin: 40px auto;
+
+  padding: 30px;
+
+  max-width: 700px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border-radius: 20px;
+
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+
+}
+
+/* Skills */
+
+.skill-box {
+
+  display: inline-block;
+
+  margin: 10px;
+
+  padding: 12px 25px;
+
+  background: rgba(255,255,255,0.2);
+
+  border-radius: 12px;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+
+  cursor: pointer;
+
+}
+
+.skill-box:hover {
+
+  background: #ffdd59;
+
+  color: #000;
+
+  transform: scale(1.1);
+
+}
+
+/* Contact */
+
+.contact a {
+
+  color: #ffdd59;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+}
+
+.contact a:hover {
+
+  text-decoration: underline;
+
+}
+
+/* Footer */
+
+footer {
+
+  padding: 15px;
+
+  font-size: 0.9rem;
+
+  background: rgba(0,0,0,0.3);
+
+  margin-top: 30px;
+
+}
